@@ -1,0 +1,2659 @@
+{
+  "config": {
+    "configFile": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\playwright.config.ts",
+    "rootDir": "D:/Kurt/PROGRAM PROJECTS/ECOMM/tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/Kurt/PROGRAM PROJECTS/ECOMM/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "D:/Kurt/PROGRAM PROJECTS/ECOMM/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.60.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "e2e.spec.ts",
+      "file": "e2e.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Sole Heaven - Full E2E Test Suite",
+          "file": "e2e.spec.ts",
+          "line": 17,
+          "column": 6,
+          "specs": [],
+          "suites": [
+            {
+              "title": "Home Page (/)",
+              "file": "e2e.spec.ts",
+              "line": 20,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "should load the home page with hero and featured products",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 2646,
+                          "error": {
+                            "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n",
+                            "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:22:18",
+                            "location": {
+                              "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                              "column": 18,
+                              "line": 22
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 20 |\u001b[39m   test\u001b[33m.\u001b[39mdescribe(\u001b[32m\"Home Page (/)\"\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 21 |\u001b[39m     test(\u001b[32m\"should load the home page with hero and featured products\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[33mBASE_URL\u001b[39m)\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m\n \u001b[90m 24 |\u001b[39m       \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"h1\"\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m\"STYLE\"\u001b[39m)\n \u001b[90m 25 |\u001b[39m       \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"text=SHOP NOW\"\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                                "column": 18,
+                                "line": 22
+                              },
+                              "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n\n\n  20 |   test.describe(\"Home Page (/)\", () => {\n  21 |     test(\"should load the home page with hero and featured products\", async ({ page }) => {\n> 22 |       await page.goto(BASE_URL)\n     |                  ^\n  23 |\n  24 |       await expect(page.locator(\"h1\")).toContainText(\"STYLE\")\n  25 |       await expect(page.locator(\"text=SHOP NOW\")).toBeVisible()\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:22:18"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-06-08T17:06:37.929Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-8b3dd--hero-and-featured-products-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-8b3dd--hero-and-featured-products-chromium\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-8b3dd--hero-and-featured-products-chromium\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                            "column": 18,
+                            "line": 22
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "b1c7859d981cc20c96be-72d4445aaf75c9eece0e",
+                  "file": "e2e.spec.ts",
+                  "line": 21,
+                  "column": 9
+                }
+              ]
+            },
+            {
+              "title": "Products Catalog (/products)",
+              "file": "e2e.spec.ts",
+              "line": 34,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "should load and display products with filters",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 2632,
+                          "error": {
+                            "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/products\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/products\", waiting until \"load\"\u001b[22m\n",
+                            "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/products\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/products\", waiting until \"load\"\u001b[22m\n\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:36:18",
+                            "location": {
+                              "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                              "column": 18,
+                              "line": 36
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 34 |\u001b[39m   test\u001b[33m.\u001b[39mdescribe(\u001b[32m\"Products Catalog (/products)\"\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 35 |\u001b[39m     test(\u001b[32m\"should load and display products with filters\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 36 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`${BASE_URL}/products`\u001b[39m)\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 37 |\u001b[39m\n \u001b[90m 38 |\u001b[39m       \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"h1\"\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m\"All Products\"\u001b[39m)\n \u001b[90m 39 |\u001b[39m\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                                "column": 18,
+                                "line": 36
+                              },
+                              "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/products\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/products\", waiting until \"load\"\u001b[22m\n\n\n  34 |   test.describe(\"Products Catalog (/products)\", () => {\n  35 |     test(\"should load and display products with filters\", async ({ page }) => {\n> 36 |       await page.goto(`${BASE_URL}/products`)\n     |                  ^\n  37 |\n  38 |       await expect(page.locator(\"h1\")).toContainText(\"All Products\")\n  39 |\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:36:18"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-06-08T17:06:41.678Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-7d675-splay-products-with-filters-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-7d675-splay-products-with-filters-chromium\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-7d675-splay-products-with-filters-chromium\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                            "column": 18,
+                            "line": 36
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "b1c7859d981cc20c96be-155a877a5df6f0240655",
+                  "file": "e2e.spec.ts",
+                  "line": 35,
+                  "column": 9
+                },
+                {
+                  "title": "should filter by brand",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 2,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 2635,
+                          "error": {
+                            "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/products\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/products\", waiting until \"load\"\u001b[22m\n",
+                            "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/products\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/products\", waiting until \"load\"\u001b[22m\n\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:52:18",
+                            "location": {
+                              "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                              "column": 18,
+                              "line": 52
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 50 |\u001b[39m\n \u001b[90m 51 |\u001b[39m     test(\u001b[32m\"should filter by brand\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 52 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`${BASE_URL}/products`\u001b[39m)\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 53 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m\"a[href^='/products/']\"\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\n \u001b[90m 54 |\u001b[39m\n \u001b[90m 55 |\u001b[39m       \u001b[36mconst\u001b[39m brandSelect \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"select\"\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                                "column": 18,
+                                "line": 52
+                              },
+                              "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/products\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/products\", waiting until \"load\"\u001b[22m\n\n\n  50 |\n  51 |     test(\"should filter by brand\", async ({ page }) => {\n> 52 |       await page.goto(`${BASE_URL}/products`)\n     |                  ^\n  53 |       await page.waitForSelector(\"a[href^='/products/']\", { timeout: 15000 })\n  54 |\n  55 |       const brandSelect = page.locator(\"select\").first()\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:52:18"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-06-08T17:06:45.331Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-5c6ed-ucts-should-filter-by-brand-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-5c6ed-ucts-should-filter-by-brand-chromium\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-5c6ed-ucts-should-filter-by-brand-chromium\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                            "column": 18,
+                            "line": 52
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "b1c7859d981cc20c96be-c81c811cad4ab7d84111",
+                  "file": "e2e.spec.ts",
+                  "line": 51,
+                  "column": 9
+                },
+                {
+                  "title": "should filter by size",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 3,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 2624,
+                          "error": {
+                            "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/products\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/products\", waiting until \"load\"\u001b[22m\n",
+                            "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/products\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/products\", waiting until \"load\"\u001b[22m\n\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:67:18",
+                            "location": {
+                              "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                              "column": 18,
+                              "line": 67
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 65 |\u001b[39m\n \u001b[90m 66 |\u001b[39m     test(\u001b[32m\"should filter by size\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 67 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`${BASE_URL}/products`\u001b[39m)\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 68 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m\"a[href^='/products/']\"\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\n \u001b[90m 69 |\u001b[39m\n \u001b[90m 70 |\u001b[39m       \u001b[36mconst\u001b[39m sizeBtn \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"button\"\u001b[39m)\u001b[33m.\u001b[39mfilter({ hasText\u001b[33m:\u001b[39m \u001b[32m\"42\"\u001b[39m })\u001b[33m.\u001b[39mfirst()\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                                "column": 18,
+                                "line": 67
+                              },
+                              "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/products\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/products\", waiting until \"load\"\u001b[22m\n\n\n  65 |\n  66 |     test(\"should filter by size\", async ({ page }) => {\n> 67 |       await page.goto(`${BASE_URL}/products`)\n     |                  ^\n  68 |       await page.waitForSelector(\"a[href^='/products/']\", { timeout: 15000 })\n  69 |\n  70 |       const sizeBtn = page.locator(\"button\").filter({ hasText: \"42\" }).first()\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:67:18"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-06-08T17:06:48.995Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-2cc7b-ducts-should-filter-by-size-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-2cc7b-ducts-should-filter-by-size-chromium\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-2cc7b-ducts-should-filter-by-size-chromium\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                            "column": 18,
+                            "line": 67
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "b1c7859d981cc20c96be-5bec0b8963e192643939",
+                  "file": "e2e.spec.ts",
+                  "line": 66,
+                  "column": 9
+                },
+                {
+                  "title": "should paginate if more than 8 products",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 4,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 2666,
+                          "error": {
+                            "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/products\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/products\", waiting until \"load\"\u001b[22m\n",
+                            "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/products\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/products\", waiting until \"load\"\u001b[22m\n\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:78:18",
+                            "location": {
+                              "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                              "column": 18,
+                              "line": 78
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 76 |\u001b[39m\n \u001b[90m 77 |\u001b[39m     test(\u001b[32m\"should paginate if more than 8 products\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 78 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`${BASE_URL}/products`\u001b[39m)\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 79 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m\"a[href^='/products/']\"\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\n \u001b[90m 80 |\u001b[39m\n \u001b[90m 81 |\u001b[39m       \u001b[36mconst\u001b[39m nextBtn \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"button:has-text('NEXT')\"\u001b[39m)\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                                "column": 18,
+                                "line": 78
+                              },
+                              "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/products\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/products\", waiting until \"load\"\u001b[22m\n\n\n  76 |\n  77 |     test(\"should paginate if more than 8 products\", async ({ page }) => {\n> 78 |       await page.goto(`${BASE_URL}/products`)\n     |                  ^\n  79 |       await page.waitForSelector(\"a[href^='/products/']\", { timeout: 15000 })\n  80 |\n  81 |       const nextBtn = page.locator(\"button:has-text('NEXT')\")\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:78:18"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-06-08T17:06:52.656Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-dee85-ate-if-more-than-8-products-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-dee85-ate-if-more-than-8-products-chromium\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-dee85-ate-if-more-than-8-products-chromium\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                            "column": 18,
+                            "line": 78
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "b1c7859d981cc20c96be-1e808b6e67ad7c3b0c40",
+                  "file": "e2e.spec.ts",
+                  "line": 77,
+                  "column": 9
+                }
+              ]
+            },
+            {
+              "title": "Product Detail (/products/[id])",
+              "file": "e2e.spec.ts",
+              "line": 91,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "should load product detail page",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 5,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 2574,
+                          "error": {
+                            "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/products\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/products\", waiting until \"load\"\u001b[22m\n",
+                            "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/products\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/products\", waiting until \"load\"\u001b[22m\n\n    at getFirstProductId (D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:94:18)\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:102:25",
+                            "location": {
+                              "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                              "column": 18,
+                              "line": 94
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 92 |\u001b[39m     \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m getFirstProductId(browser\u001b[33m:\u001b[39m any) {\n \u001b[90m 93 |\u001b[39m       \u001b[36mconst\u001b[39m page \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m browser\u001b[33m.\u001b[39mnewPage()\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 94 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`${BASE_URL}/products`\u001b[39m)\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 95 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m\"a[href^='/products/']\"\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\n \u001b[90m 96 |\u001b[39m       \u001b[36mconst\u001b[39m href \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"a[href^='/products/']\"\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mgetAttribute(\u001b[32m\"href\"\u001b[39m)\n \u001b[90m 97 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mclose()\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                                "column": 18,
+                                "line": 94
+                              },
+                              "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/products\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/products\", waiting until \"load\"\u001b[22m\n\n\n  92 |     async function getFirstProductId(browser: any) {\n  93 |       const page = await browser.newPage()\n> 94 |       await page.goto(`${BASE_URL}/products`)\n     |                  ^\n  95 |       await page.waitForSelector(\"a[href^='/products/']\", { timeout: 15000 })\n  96 |       const href = await page.locator(\"a[href^='/products/']\").first().getAttribute(\"href\")\n  97 |       await page.close()\n    at getFirstProductId (D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:94:18)\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:102:25"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-06-08T17:06:56.527Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-7902e-ld-load-product-detail-page-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-7902e-ld-load-product-detail-page-chromium\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-7902e-ld-load-product-detail-page-chromium\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                            "column": 18,
+                            "line": 94
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "b1c7859d981cc20c96be-e3028038fd2e8651cae4",
+                  "file": "e2e.spec.ts",
+                  "line": 101,
+                  "column": 9
+                },
+                {
+                  "title": "should select size and show add to cart button",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 6,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 2635,
+                          "error": {
+                            "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/products\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/products\", waiting until \"load\"\u001b[22m\n",
+                            "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/products\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/products\", waiting until \"load\"\u001b[22m\n\n    at getFirstProductId (D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:94:18)\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:115:25",
+                            "location": {
+                              "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                              "column": 18,
+                              "line": 94
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 92 |\u001b[39m     \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m getFirstProductId(browser\u001b[33m:\u001b[39m any) {\n \u001b[90m 93 |\u001b[39m       \u001b[36mconst\u001b[39m page \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m browser\u001b[33m.\u001b[39mnewPage()\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 94 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`${BASE_URL}/products`\u001b[39m)\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 95 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m\"a[href^='/products/']\"\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\n \u001b[90m 96 |\u001b[39m       \u001b[36mconst\u001b[39m href \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"a[href^='/products/']\"\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mgetAttribute(\u001b[32m\"href\"\u001b[39m)\n \u001b[90m 97 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mclose()\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                                "column": 18,
+                                "line": 94
+                              },
+                              "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/products\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/products\", waiting until \"load\"\u001b[22m\n\n\n  92 |     async function getFirstProductId(browser: any) {\n  93 |       const page = await browser.newPage()\n> 94 |       await page.goto(`${BASE_URL}/products`)\n     |                  ^\n  95 |       await page.waitForSelector(\"a[href^='/products/']\", { timeout: 15000 })\n  96 |       const href = await page.locator(\"a[href^='/products/']\").first().getAttribute(\"href\")\n  97 |       await page.close()\n    at getFirstProductId (D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:94:18)\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:115:25"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-06-08T17:07:00.105Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-96297-and-show-add-to-cart-button-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-96297-and-show-add-to-cart-button-chromium\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-96297-and-show-add-to-cart-button-chromium\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                            "column": 18,
+                            "line": 94
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "b1c7859d981cc20c96be-97fded7fb711799a302f",
+                  "file": "e2e.spec.ts",
+                  "line": 114,
+                  "column": 9
+                },
+                {
+                  "title": "should add item to cart",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 7,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 2680,
+                          "error": {
+                            "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/products\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/products\", waiting until \"load\"\u001b[22m\n",
+                            "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/products\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/products\", waiting until \"load\"\u001b[22m\n\n    at getFirstProductId (D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:94:18)\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:131:25",
+                            "location": {
+                              "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                              "column": 18,
+                              "line": 94
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 92 |\u001b[39m     \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m getFirstProductId(browser\u001b[33m:\u001b[39m any) {\n \u001b[90m 93 |\u001b[39m       \u001b[36mconst\u001b[39m page \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m browser\u001b[33m.\u001b[39mnewPage()\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 94 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`${BASE_URL}/products`\u001b[39m)\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 95 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m\"a[href^='/products/']\"\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\n \u001b[90m 96 |\u001b[39m       \u001b[36mconst\u001b[39m href \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"a[href^='/products/']\"\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mgetAttribute(\u001b[32m\"href\"\u001b[39m)\n \u001b[90m 97 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mclose()\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                                "column": 18,
+                                "line": 94
+                              },
+                              "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/products\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/products\", waiting until \"load\"\u001b[22m\n\n\n  92 |     async function getFirstProductId(browser: any) {\n  93 |       const page = await browser.newPage()\n> 94 |       await page.goto(`${BASE_URL}/products`)\n     |                  ^\n  95 |       await page.waitForSelector(\"a[href^='/products/']\", { timeout: 15000 })\n  96 |       const href = await page.locator(\"a[href^='/products/']\").first().getAttribute(\"href\")\n  97 |       await page.close()\n    at getFirstProductId (D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:94:18)\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:131:25"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-06-08T17:07:04.880Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-cb2e7--id-should-add-item-to-cart-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-cb2e7--id-should-add-item-to-cart-chromium\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-cb2e7--id-should-add-item-to-cart-chromium\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                            "column": 18,
+                            "line": 94
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "b1c7859d981cc20c96be-01e76de7ec6dfa9741fd",
+                  "file": "e2e.spec.ts",
+                  "line": 130,
+                  "column": 9
+                }
+              ]
+            },
+            {
+              "title": "Registration (/register)",
+              "file": "e2e.spec.ts",
+              "line": 150,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "should display register form",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 8,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 2746,
+                          "error": {
+                            "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/register\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/register\", waiting until \"load\"\u001b[22m\n",
+                            "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/register\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/register\", waiting until \"load\"\u001b[22m\n\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:152:18",
+                            "location": {
+                              "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                              "column": 18,
+                              "line": 152
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 150 |\u001b[39m   test\u001b[33m.\u001b[39mdescribe(\u001b[32m\"Registration (/register)\"\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 151 |\u001b[39m     test(\u001b[32m\"should display register form\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 152 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`${BASE_URL}/register`\u001b[39m)\n \u001b[90m     |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 153 |\u001b[39m       \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"h1\"\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m\"Create Account\"\u001b[39m)\n \u001b[90m 154 |\u001b[39m       \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"#email\"\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\n \u001b[90m 155 |\u001b[39m       \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"#password\"\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                                "column": 18,
+                                "line": 152
+                              },
+                              "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/register\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/register\", waiting until \"load\"\u001b[22m\n\n\n  150 |   test.describe(\"Registration (/register)\", () => {\n  151 |     test(\"should display register form\", async ({ page }) => {\n> 152 |       await page.goto(`${BASE_URL}/register`)\n      |                  ^\n  153 |       await expect(page.locator(\"h1\")).toContainText(\"Create Account\")\n  154 |       await expect(page.locator(\"#email\")).toBeVisible()\n  155 |       await expect(page.locator(\"#password\")).toBeVisible()\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:152:18"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-06-08T17:07:09.328Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-21db0-hould-display-register-form-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-21db0-hould-display-register-form-chromium\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-21db0-hould-display-register-form-chromium\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                            "column": 18,
+                            "line": 152
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "b1c7859d981cc20c96be-6c028f81704aa45323d5",
+                  "file": "e2e.spec.ts",
+                  "line": 151,
+                  "column": 9
+                },
+                {
+                  "title": "should show error for mismatched passwords",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 9,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 2836,
+                          "error": {
+                            "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/register\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/register\", waiting until \"load\"\u001b[22m\n",
+                            "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/register\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/register\", waiting until \"load\"\u001b[22m\n\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:160:18",
+                            "location": {
+                              "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                              "column": 18,
+                              "line": 160
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 158 |\u001b[39m\n \u001b[90m 159 |\u001b[39m     test(\u001b[32m\"should show error for mismatched passwords\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 160 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`${BASE_URL}/register`\u001b[39m)\n \u001b[90m     |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 161 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m\"#email\"\u001b[39m\u001b[33m,\u001b[39m \u001b[32m\"mismatch@test.com\"\u001b[39m)\n \u001b[90m 162 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m\"#password\"\u001b[39m\u001b[33m,\u001b[39m \u001b[32m\"validpassword1\"\u001b[39m)\n \u001b[90m 163 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m\"#confirmPassword\"\u001b[39m\u001b[33m,\u001b[39m \u001b[32m\"differentpassword\"\u001b[39m)\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                                "column": 18,
+                                "line": 160
+                              },
+                              "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/register\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/register\", waiting until \"load\"\u001b[22m\n\n\n  158 |\n  159 |     test(\"should show error for mismatched passwords\", async ({ page }) => {\n> 160 |       await page.goto(`${BASE_URL}/register`)\n      |                  ^\n  161 |       await page.fill(\"#email\", \"mismatch@test.com\")\n  162 |       await page.fill(\"#password\", \"validpassword1\")\n  163 |       await page.fill(\"#confirmPassword\", \"differentpassword\")\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:160:18"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-06-08T17:07:13.683Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-46678-or-for-mismatched-passwords-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-46678-or-for-mismatched-passwords-chromium\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-46678-or-for-mismatched-passwords-chromium\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                            "column": 18,
+                            "line": 160
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "b1c7859d981cc20c96be-07b48170aebd1a55fc48",
+                  "file": "e2e.spec.ts",
+                  "line": 159,
+                  "column": 9
+                },
+                {
+                  "title": "should register a new user",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 10,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 2807,
+                          "error": {
+                            "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/register\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/register\", waiting until \"load\"\u001b[22m\n",
+                            "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/register\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/register\", waiting until \"load\"\u001b[22m\n\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:170:18",
+                            "location": {
+                              "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                              "column": 18,
+                              "line": 170
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 168 |\u001b[39m\n \u001b[90m 169 |\u001b[39m     test(\u001b[32m\"should register a new user\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 170 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`${BASE_URL}/register`\u001b[39m)\n \u001b[90m     |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 171 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m\"#email\"\u001b[39m\u001b[33m,\u001b[39m \u001b[33mTEST_EMAIL\u001b[39m)\n \u001b[90m 172 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m\"#password\"\u001b[39m\u001b[33m,\u001b[39m \u001b[33mTEST_PASSWORD\u001b[39m)\n \u001b[90m 173 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m\"#confirmPassword\"\u001b[39m\u001b[33m,\u001b[39m \u001b[33mTEST_PASSWORD\u001b[39m)\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                                "column": 18,
+                                "line": 170
+                              },
+                              "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/register\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/register\", waiting until \"load\"\u001b[22m\n\n\n  168 |\n  169 |     test(\"should register a new user\", async ({ page }) => {\n> 170 |       await page.goto(`${BASE_URL}/register`)\n      |                  ^\n  171 |       await page.fill(\"#email\", TEST_EMAIL)\n  172 |       await page.fill(\"#password\", TEST_PASSWORD)\n  173 |       await page.fill(\"#confirmPassword\", TEST_PASSWORD)\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:170:18"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-06-08T17:07:18.149Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-1b2c6--should-register-a-new-user-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-1b2c6--should-register-a-new-user-chromium\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-1b2c6--should-register-a-new-user-chromium\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                            "column": 18,
+                            "line": 170
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "b1c7859d981cc20c96be-1cd994c22e1a591b8aac",
+                  "file": "e2e.spec.ts",
+                  "line": 169,
+                  "column": 9
+                }
+              ]
+            },
+            {
+              "title": "Login (/login)",
+              "file": "e2e.spec.ts",
+              "line": 183,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "should display login form",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 11,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 2802,
+                          "error": {
+                            "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/login\", waiting until \"load\"\u001b[22m\n",
+                            "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/login\", waiting until \"load\"\u001b[22m\n\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:185:18",
+                            "location": {
+                              "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                              "column": 18,
+                              "line": 185
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 183 |\u001b[39m   test\u001b[33m.\u001b[39mdescribe(\u001b[32m\"Login (/login)\"\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 184 |\u001b[39m     test(\u001b[32m\"should display login form\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 185 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`${BASE_URL}/login`\u001b[39m)\n \u001b[90m     |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 186 |\u001b[39m       \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"h1\"\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m\"Welcome Back\"\u001b[39m)\n \u001b[90m 187 |\u001b[39m       \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"#email\"\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\n \u001b[90m 188 |\u001b[39m       \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"#password\"\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                                "column": 18,
+                                "line": 185
+                              },
+                              "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/login\", waiting until \"load\"\u001b[22m\n\n\n  183 |   test.describe(\"Login (/login)\", () => {\n  184 |     test(\"should display login form\", async ({ page }) => {\n> 185 |       await page.goto(`${BASE_URL}/login`)\n      |                  ^\n  186 |       await expect(page.locator(\"h1\")).toContainText(\"Welcome Back\")\n  187 |       await expect(page.locator(\"#email\")).toBeVisible()\n  188 |       await expect(page.locator(\"#password\")).toBeVisible()\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:185:18"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-06-08T17:07:22.544Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-18284-n-should-display-login-form-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-18284-n-should-display-login-form-chromium\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-18284-n-should-display-login-form-chromium\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                            "column": 18,
+                            "line": 185
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "b1c7859d981cc20c96be-a8eec3438c17dafd983b",
+                  "file": "e2e.spec.ts",
+                  "line": 184,
+                  "column": 9
+                },
+                {
+                  "title": "should show error for invalid credentials",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 12,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 2801,
+                          "error": {
+                            "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/login\", waiting until \"load\"\u001b[22m\n",
+                            "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/login\", waiting until \"load\"\u001b[22m\n\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:192:18",
+                            "location": {
+                              "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                              "column": 18,
+                              "line": 192
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 190 |\u001b[39m\n \u001b[90m 191 |\u001b[39m     test(\u001b[32m\"should show error for invalid credentials\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 192 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`${BASE_URL}/login`\u001b[39m)\n \u001b[90m     |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 193 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m\"#email\"\u001b[39m\u001b[33m,\u001b[39m \u001b[32m\"nonexistent@test.com\"\u001b[39m)\n \u001b[90m 194 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m\"#password\"\u001b[39m\u001b[33m,\u001b[39m \u001b[32m\"wrongpassword\"\u001b[39m)\n \u001b[90m 195 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"button[type='submit']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                                "column": 18,
+                                "line": 192
+                              },
+                              "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/login\", waiting until \"load\"\u001b[22m\n\n\n  190 |\n  191 |     test(\"should show error for invalid credentials\", async ({ page }) => {\n> 192 |       await page.goto(`${BASE_URL}/login`)\n      |                  ^\n  193 |       await page.fill(\"#email\", \"nonexistent@test.com\")\n  194 |       await page.fill(\"#password\", \"wrongpassword\")\n  195 |       await page.locator(\"button[type='submit']\").click()\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:192:18"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-06-08T17:07:26.980Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-551c8-ror-for-invalid-credentials-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-551c8-ror-for-invalid-credentials-chromium\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-551c8-ror-for-invalid-credentials-chromium\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                            "column": 18,
+                            "line": 192
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "b1c7859d981cc20c96be-7b7661907471952d08cf",
+                  "file": "e2e.spec.ts",
+                  "line": 191,
+                  "column": 9
+                },
+                {
+                  "title": "should login as admin",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 13,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 2892,
+                          "error": {
+                            "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/login\", waiting until \"load\"\u001b[22m\n",
+                            "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/login\", waiting until \"load\"\u001b[22m\n\n    at loginAs (D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:10:14)\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:200:13",
+                            "location": {
+                              "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                              "column": 14,
+                              "line": 10
+                            },
+                            "snippet": "\u001b[0m \u001b[90m  8 |\u001b[39m\n \u001b[90m  9 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m loginAs(page\u001b[33m:\u001b[39m any\u001b[33m,\u001b[39m email\u001b[33m:\u001b[39m string\u001b[33m,\u001b[39m password\u001b[33m:\u001b[39m string) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`${BASE_URL}/login`\u001b[39m)\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m\"#email\"\u001b[39m\u001b[33m,\u001b[39m email)\n \u001b[90m 12 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m\"#password\"\u001b[39m\u001b[33m,\u001b[39m password)\n \u001b[90m 13 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"button[type='submit']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                                "column": 14,
+                                "line": 10
+                              },
+                              "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/login\", waiting until \"load\"\u001b[22m\n\n\n   8 |\n   9 | async function loginAs(page: any, email: string, password: string) {\n> 10 |   await page.goto(`${BASE_URL}/login`)\n     |              ^\n  11 |   await page.fill(\"#email\", email)\n  12 |   await page.fill(\"#password\", password)\n  13 |   await page.locator(\"button[type='submit']\").click()\n    at loginAs (D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:10:14)\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:200:13"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-06-08T17:07:31.298Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-004f4-login-should-login-as-admin-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-004f4-login-should-login-as-admin-chromium\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-004f4-login-should-login-as-admin-chromium\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                            "column": 14,
+                            "line": 10
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "b1c7859d981cc20c96be-fe497765ebd049c44727",
+                  "file": "e2e.spec.ts",
+                  "line": 199,
+                  "column": 9
+                }
+              ]
+            },
+            {
+              "title": "Navigation",
+              "file": "e2e.spec.ts",
+              "line": 210,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "should navigate through links",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 14,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 2807,
+                          "error": {
+                            "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n",
+                            "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:212:18",
+                            "location": {
+                              "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                              "column": 18,
+                              "line": 212
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 210 |\u001b[39m   test\u001b[33m.\u001b[39mdescribe(\u001b[32m\"Navigation\"\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 211 |\u001b[39m     test(\u001b[32m\"should navigate through links\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 212 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[33mBASE_URL\u001b[39m)\n \u001b[90m     |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 213 |\u001b[39m\n \u001b[90m 214 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"text=Products\"\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mclick()\n \u001b[90m 215 |\u001b[39m       \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[35m/\\/products/\u001b[39m)\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                                "column": 18,
+                                "line": 212
+                              },
+                              "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n\n\n  210 |   test.describe(\"Navigation\", () => {\n  211 |     test(\"should navigate through links\", async ({ page }) => {\n> 212 |       await page.goto(BASE_URL)\n      |                  ^\n  213 |\n  214 |       await page.locator(\"text=Products\").first().click()\n  215 |       await expect(page).toHaveURL(/\\/products/)\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:212:18"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-06-08T17:07:35.910Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-86f4a-ould-navigate-through-links-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-86f4a-ould-navigate-through-links-chromium\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-86f4a-ould-navigate-through-links-chromium\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                            "column": 18,
+                            "line": 212
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "b1c7859d981cc20c96be-e1b23a9c6d13a60a5f21",
+                  "file": "e2e.spec.ts",
+                  "line": 211,
+                  "column": 9
+                }
+              ]
+            },
+            {
+              "title": "Cart Functionality",
+              "file": "e2e.spec.ts",
+              "line": 223,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "should open cart drawer and show items",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 15,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 2756,
+                          "error": {
+                            "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n",
+                            "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:225:18",
+                            "location": {
+                              "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                              "column": 18,
+                              "line": 225
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 223 |\u001b[39m   test\u001b[33m.\u001b[39mdescribe(\u001b[32m\"Cart Functionality\"\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 224 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 225 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[33mBASE_URL\u001b[39m)\n \u001b[90m     |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 226 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(() \u001b[33m=>\u001b[39m {\n \u001b[90m 227 |\u001b[39m         localStorage\u001b[33m.\u001b[39mremoveItem(\u001b[32m\"sneaker-cart\"\u001b[39m)\n \u001b[90m 228 |\u001b[39m       })\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                                "column": 18,
+                                "line": 225
+                              },
+                              "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n\n\n  223 |   test.describe(\"Cart Functionality\", () => {\n  224 |     test.beforeEach(async ({ page }) => {\n> 225 |       await page.goto(BASE_URL)\n      |                  ^\n  226 |       await page.evaluate(() => {\n  227 |         localStorage.removeItem(\"sneaker-cart\")\n  228 |       })\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:225:18"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-06-08T17:07:40.414Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-e9569--cart-drawer-and-show-items-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-e9569--cart-drawer-and-show-items-chromium\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-e9569--cart-drawer-and-show-items-chromium\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                            "column": 18,
+                            "line": 225
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "b1c7859d981cc20c96be-135bb85bac6bb48c9be7",
+                  "file": "e2e.spec.ts",
+                  "line": 257,
+                  "column": 9
+                },
+                {
+                  "title": "should update item quantity in cart",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 16,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 2806,
+                          "error": {
+                            "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n",
+                            "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:225:18",
+                            "location": {
+                              "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                              "column": 18,
+                              "line": 225
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 223 |\u001b[39m   test\u001b[33m.\u001b[39mdescribe(\u001b[32m\"Cart Functionality\"\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 224 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 225 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[33mBASE_URL\u001b[39m)\n \u001b[90m     |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 226 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(() \u001b[33m=>\u001b[39m {\n \u001b[90m 227 |\u001b[39m         localStorage\u001b[33m.\u001b[39mremoveItem(\u001b[32m\"sneaker-cart\"\u001b[39m)\n \u001b[90m 228 |\u001b[39m       })\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                                "column": 18,
+                                "line": 225
+                              },
+                              "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n\n\n  223 |   test.describe(\"Cart Functionality\", () => {\n  224 |     test.beforeEach(async ({ page }) => {\n> 225 |       await page.goto(BASE_URL)\n      |                  ^\n  226 |       await page.evaluate(() => {\n  227 |         localStorage.removeItem(\"sneaker-cart\")\n  228 |       })\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:225:18"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-06-08T17:07:45.261Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-74a67-pdate-item-quantity-in-cart-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-74a67-pdate-item-quantity-in-cart-chromium\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-74a67-pdate-item-quantity-in-cart-chromium\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                            "column": 18,
+                            "line": 225
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "b1c7859d981cc20c96be-0ea94eb9dc498456f705",
+                  "file": "e2e.spec.ts",
+                  "line": 262,
+                  "column": 9
+                },
+                {
+                  "title": "should remove item from cart",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 17,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 2766,
+                          "error": {
+                            "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n",
+                            "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:225:18",
+                            "location": {
+                              "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                              "column": 18,
+                              "line": 225
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 223 |\u001b[39m   test\u001b[33m.\u001b[39mdescribe(\u001b[32m\"Cart Functionality\"\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 224 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 225 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[33mBASE_URL\u001b[39m)\n \u001b[90m     |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 226 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(() \u001b[33m=>\u001b[39m {\n \u001b[90m 227 |\u001b[39m         localStorage\u001b[33m.\u001b[39mremoveItem(\u001b[32m\"sneaker-cart\"\u001b[39m)\n \u001b[90m 228 |\u001b[39m       })\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                                "column": 18,
+                                "line": 225
+                              },
+                              "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n\n\n  223 |   test.describe(\"Cart Functionality\", () => {\n  224 |     test.beforeEach(async ({ page }) => {\n> 225 |       await page.goto(BASE_URL)\n      |                  ^\n  226 |       await page.evaluate(() => {\n  227 |         localStorage.removeItem(\"sneaker-cart\")\n  228 |       })\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:225:18"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-06-08T17:07:49.616Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-feb22-hould-remove-item-from-cart-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-feb22-hould-remove-item-from-cart-chromium\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-feb22-hould-remove-item-from-cart-chromium\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                            "column": 18,
+                            "line": 225
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "b1c7859d981cc20c96be-6167a9bbd79d9e51add4",
+                  "file": "e2e.spec.ts",
+                  "line": 273,
+                  "column": 9
+                }
+              ]
+            },
+            {
+              "title": "404 Page",
+              "file": "e2e.spec.ts",
+              "line": 290,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "should show custom 404 page",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 18,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 2752,
+                          "error": {
+                            "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/nonexistent-page\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/nonexistent-page\", waiting until \"load\"\u001b[22m\n",
+                            "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/nonexistent-page\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/nonexistent-page\", waiting until \"load\"\u001b[22m\n\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:292:35",
+                            "location": {
+                              "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                              "column": 35,
+                              "line": 292
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 290 |\u001b[39m   test\u001b[33m.\u001b[39mdescribe(\u001b[32m\"404 Page\"\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 291 |\u001b[39m     test(\u001b[32m\"should show custom 404 page\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 292 |\u001b[39m       \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`${BASE_URL}/nonexistent-page`\u001b[39m)\n \u001b[90m     |\u001b[39m                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 293 |\u001b[39m       expect(response\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBe(\u001b[35m404\u001b[39m)\n \u001b[90m 294 |\u001b[39m       \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"text=Page Not Found\"\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\n \u001b[90m 295 |\u001b[39m     })\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                                "column": 35,
+                                "line": 292
+                              },
+                              "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/nonexistent-page\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/nonexistent-page\", waiting until \"load\"\u001b[22m\n\n\n  290 |   test.describe(\"404 Page\", () => {\n  291 |     test(\"should show custom 404 page\", async ({ page }) => {\n> 292 |       const response = await page.goto(`${BASE_URL}/nonexistent-page`)\n      |                                   ^\n  293 |       expect(response?.status()).toBe(404)\n  294 |       await expect(page.locator(\"text=Page Not Found\")).toBeVisible()\n  295 |     })\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:292:35"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-06-08T17:07:53.965Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-07105-should-show-custom-404-page-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-07105-should-show-custom-404-page-chromium\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-07105-should-show-custom-404-page-chromium\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                            "column": 35,
+                            "line": 292
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "b1c7859d981cc20c96be-b3ef5df18a0765c5470c",
+                  "file": "e2e.spec.ts",
+                  "line": 291,
+                  "column": 9
+                }
+              ]
+            },
+            {
+              "title": "Admin Dashboard (/admin)",
+              "file": "e2e.spec.ts",
+              "line": 299,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "should load admin dashboard with stats",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 19,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 2780,
+                          "error": {
+                            "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/login\", waiting until \"load\"\u001b[22m\n",
+                            "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/login\", waiting until \"load\"\u001b[22m\n\n    at loginAs (D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:10:14)\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:301:13",
+                            "location": {
+                              "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                              "column": 14,
+                              "line": 10
+                            },
+                            "snippet": "\u001b[0m \u001b[90m  8 |\u001b[39m\n \u001b[90m  9 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m loginAs(page\u001b[33m:\u001b[39m any\u001b[33m,\u001b[39m email\u001b[33m:\u001b[39m string\u001b[33m,\u001b[39m password\u001b[33m:\u001b[39m string) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`${BASE_URL}/login`\u001b[39m)\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m\"#email\"\u001b[39m\u001b[33m,\u001b[39m email)\n \u001b[90m 12 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m\"#password\"\u001b[39m\u001b[33m,\u001b[39m password)\n \u001b[90m 13 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"button[type='submit']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                                "column": 14,
+                                "line": 10
+                              },
+                              "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/login\", waiting until \"load\"\u001b[22m\n\n\n   8 |\n   9 | async function loginAs(page: any, email: string, password: string) {\n> 10 |   await page.goto(`${BASE_URL}/login`)\n     |              ^\n  11 |   await page.fill(\"#email\", email)\n  12 |   await page.fill(\"#password\", password)\n  13 |   await page.locator(\"button[type='submit']\").click()\n    at loginAs (D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:10:14)\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:301:13"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-06-08T17:07:58.183Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-bbc49--admin-dashboard-with-stats-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-bbc49--admin-dashboard-with-stats-chromium\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-bbc49--admin-dashboard-with-stats-chromium\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                            "column": 14,
+                            "line": 10
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "b1c7859d981cc20c96be-15258e32ebf70743db97",
+                  "file": "e2e.spec.ts",
+                  "line": 304,
+                  "column": 9
+                }
+              ]
+            },
+            {
+              "title": "Admin Products (/admin/products)",
+              "file": "e2e.spec.ts",
+              "line": 316,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "should list products in admin",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 20,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 2804,
+                          "error": {
+                            "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/login\", waiting until \"load\"\u001b[22m\n",
+                            "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/login\", waiting until \"load\"\u001b[22m\n\n    at loginAs (D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:10:14)\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:318:13",
+                            "location": {
+                              "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                              "column": 14,
+                              "line": 10
+                            },
+                            "snippet": "\u001b[0m \u001b[90m  8 |\u001b[39m\n \u001b[90m  9 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m loginAs(page\u001b[33m:\u001b[39m any\u001b[33m,\u001b[39m email\u001b[33m:\u001b[39m string\u001b[33m,\u001b[39m password\u001b[33m:\u001b[39m string) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`${BASE_URL}/login`\u001b[39m)\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m\"#email\"\u001b[39m\u001b[33m,\u001b[39m email)\n \u001b[90m 12 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m\"#password\"\u001b[39m\u001b[33m,\u001b[39m password)\n \u001b[90m 13 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"button[type='submit']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                                "column": 14,
+                                "line": 10
+                              },
+                              "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/login\", waiting until \"load\"\u001b[22m\n\n\n   8 |\n   9 | async function loginAs(page: any, email: string, password: string) {\n> 10 |   await page.goto(`${BASE_URL}/login`)\n     |              ^\n  11 |   await page.fill(\"#email\", email)\n  12 |   await page.fill(\"#password\", password)\n  13 |   await page.locator(\"button[type='submit']\").click()\n    at loginAs (D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:10:14)\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:318:13"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-06-08T17:08:02.453Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-57c92-ould-list-products-in-admin-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-57c92-ould-list-products-in-admin-chromium\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-57c92-ould-list-products-in-admin-chromium\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                            "column": 14,
+                            "line": 10
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "b1c7859d981cc20c96be-c4fee91e031bf35de1b1",
+                  "file": "e2e.spec.ts",
+                  "line": 321,
+                  "column": 9
+                },
+                {
+                  "title": "should have Add Product button",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 21,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 2769,
+                          "error": {
+                            "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/login\", waiting until \"load\"\u001b[22m\n",
+                            "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/login\", waiting until \"load\"\u001b[22m\n\n    at loginAs (D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:10:14)\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:318:13",
+                            "location": {
+                              "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                              "column": 14,
+                              "line": 10
+                            },
+                            "snippet": "\u001b[0m \u001b[90m  8 |\u001b[39m\n \u001b[90m  9 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m loginAs(page\u001b[33m:\u001b[39m any\u001b[33m,\u001b[39m email\u001b[33m:\u001b[39m string\u001b[33m,\u001b[39m password\u001b[33m:\u001b[39m string) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`${BASE_URL}/login`\u001b[39m)\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m\"#email\"\u001b[39m\u001b[33m,\u001b[39m email)\n \u001b[90m 12 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m\"#password\"\u001b[39m\u001b[33m,\u001b[39m password)\n \u001b[90m 13 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"button[type='submit']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                                "column": 14,
+                                "line": 10
+                              },
+                              "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/login\", waiting until \"load\"\u001b[22m\n\n\n   8 |\n   9 | async function loginAs(page: any, email: string, password: string) {\n> 10 |   await page.goto(`${BASE_URL}/login`)\n     |              ^\n  11 |   await page.fill(\"#email\", email)\n  12 |   await page.fill(\"#password\", password)\n  13 |   await page.locator(\"button[type='submit']\").click()\n    at loginAs (D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:10:14)\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:318:13"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-06-08T17:08:06.902Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-ae8c7-uld-have-Add-Product-button-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-ae8c7-uld-have-Add-Product-button-chromium\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-ae8c7-uld-have-Add-Product-button-chromium\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                            "column": 14,
+                            "line": 10
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "b1c7859d981cc20c96be-6e2c86c9227b5aefdda5",
+                  "file": "e2e.spec.ts",
+                  "line": 332,
+                  "column": 9
+                },
+                {
+                  "title": "should navigate to new product form",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 22,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 2743,
+                          "error": {
+                            "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/login\", waiting until \"load\"\u001b[22m\n",
+                            "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/login\", waiting until \"load\"\u001b[22m\n\n    at loginAs (D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:10:14)\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:318:13",
+                            "location": {
+                              "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                              "column": 14,
+                              "line": 10
+                            },
+                            "snippet": "\u001b[0m \u001b[90m  8 |\u001b[39m\n \u001b[90m  9 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m loginAs(page\u001b[33m:\u001b[39m any\u001b[33m,\u001b[39m email\u001b[33m:\u001b[39m string\u001b[33m,\u001b[39m password\u001b[33m:\u001b[39m string) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`${BASE_URL}/login`\u001b[39m)\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m\"#email\"\u001b[39m\u001b[33m,\u001b[39m email)\n \u001b[90m 12 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m\"#password\"\u001b[39m\u001b[33m,\u001b[39m password)\n \u001b[90m 13 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"button[type='submit']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                                "column": 14,
+                                "line": 10
+                              },
+                              "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/login\", waiting until \"load\"\u001b[22m\n\n\n   8 |\n   9 | async function loginAs(page: any, email: string, password: string) {\n> 10 |   await page.goto(`${BASE_URL}/login`)\n     |              ^\n  11 |   await page.fill(\"#email\", email)\n  12 |   await page.fill(\"#password\", password)\n  13 |   await page.locator(\"button[type='submit']\").click()\n    at loginAs (D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:10:14)\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:318:13"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-06-08T17:08:11.337Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-48cd0-avigate-to-new-product-form-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-48cd0-avigate-to-new-product-form-chromium\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-48cd0-avigate-to-new-product-form-chromium\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                            "column": 14,
+                            "line": 10
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "b1c7859d981cc20c96be-895cd31854568d65536e",
+                  "file": "e2e.spec.ts",
+                  "line": 339,
+                  "column": 9
+                }
+              ]
+            },
+            {
+              "title": "Admin Orders (/admin/orders)",
+              "file": "e2e.spec.ts",
+              "line": 350,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "should load orders page with status filters",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 23,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 2840,
+                          "error": {
+                            "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/login\", waiting until \"load\"\u001b[22m\n",
+                            "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/login\", waiting until \"load\"\u001b[22m\n\n    at loginAs (D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:10:14)\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:352:13",
+                            "location": {
+                              "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                              "column": 14,
+                              "line": 10
+                            },
+                            "snippet": "\u001b[0m \u001b[90m  8 |\u001b[39m\n \u001b[90m  9 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m loginAs(page\u001b[33m:\u001b[39m any\u001b[33m,\u001b[39m email\u001b[33m:\u001b[39m string\u001b[33m,\u001b[39m password\u001b[33m:\u001b[39m string) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`${BASE_URL}/login`\u001b[39m)\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m\"#email\"\u001b[39m\u001b[33m,\u001b[39m email)\n \u001b[90m 12 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m\"#password\"\u001b[39m\u001b[33m,\u001b[39m password)\n \u001b[90m 13 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"button[type='submit']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                                "column": 14,
+                                "line": 10
+                              },
+                              "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/login\", waiting until \"load\"\u001b[22m\n\n\n   8 |\n   9 | async function loginAs(page: any, email: string, password: string) {\n> 10 |   await page.goto(`${BASE_URL}/login`)\n     |              ^\n  11 |   await page.fill(\"#email\", email)\n  12 |   await page.fill(\"#password\", password)\n  13 |   await page.locator(\"button[type='submit']\").click()\n    at loginAs (D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:10:14)\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:352:13"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-06-08T17:08:15.584Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-da1df-rs-page-with-status-filters-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-da1df-rs-page-with-status-filters-chromium\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-da1df-rs-page-with-status-filters-chromium\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                            "column": 14,
+                            "line": 10
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "b1c7859d981cc20c96be-d72f628f027185545c38",
+                  "file": "e2e.spec.ts",
+                  "line": 355,
+                  "column": 9
+                }
+              ]
+            },
+            {
+              "title": "Missing Pages Verification",
+              "file": "e2e.spec.ts",
+              "line": 368,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "admin edit product page should load with form",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 24,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 2761,
+                          "error": {
+                            "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/login\", waiting until \"load\"\u001b[22m\n",
+                            "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/login\", waiting until \"load\"\u001b[22m\n\n    at loginAs (D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:10:14)\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:370:13",
+                            "location": {
+                              "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                              "column": 14,
+                              "line": 10
+                            },
+                            "snippet": "\u001b[0m \u001b[90m  8 |\u001b[39m\n \u001b[90m  9 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m loginAs(page\u001b[33m:\u001b[39m any\u001b[33m,\u001b[39m email\u001b[33m:\u001b[39m string\u001b[33m,\u001b[39m password\u001b[33m:\u001b[39m string) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`${BASE_URL}/login`\u001b[39m)\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m\"#email\"\u001b[39m\u001b[33m,\u001b[39m email)\n \u001b[90m 12 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m\"#password\"\u001b[39m\u001b[33m,\u001b[39m password)\n \u001b[90m 13 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"button[type='submit']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                                "column": 14,
+                                "line": 10
+                              },
+                              "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/login\", waiting until \"load\"\u001b[22m\n\n\n   8 |\n   9 | async function loginAs(page: any, email: string, password: string) {\n> 10 |   await page.goto(`${BASE_URL}/login`)\n     |              ^\n  11 |   await page.fill(\"#email\", email)\n  12 |   await page.fill(\"#password\", password)\n  13 |   await page.locator(\"button[type='submit']\").click()\n    at loginAs (D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:10:14)\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:370:13"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-06-08T17:08:20.013Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-3bb68--page-should-load-with-form-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-3bb68--page-should-load-with-form-chromium\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-3bb68--page-should-load-with-form-chromium\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                            "column": 14,
+                            "line": 10
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "b1c7859d981cc20c96be-354f04e244e2726a59de",
+                  "file": "e2e.spec.ts",
+                  "line": 373,
+                  "column": 9
+                },
+                {
+                  "title": "account order detail page should load",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 25,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 2802,
+                          "error": {
+                            "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/login\", waiting until \"load\"\u001b[22m\n",
+                            "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/login\", waiting until \"load\"\u001b[22m\n\n    at loginAs (D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:10:14)\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:370:13",
+                            "location": {
+                              "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                              "column": 14,
+                              "line": 10
+                            },
+                            "snippet": "\u001b[0m \u001b[90m  8 |\u001b[39m\n \u001b[90m  9 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m loginAs(page\u001b[33m:\u001b[39m any\u001b[33m,\u001b[39m email\u001b[33m:\u001b[39m string\u001b[33m,\u001b[39m password\u001b[33m:\u001b[39m string) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`${BASE_URL}/login`\u001b[39m)\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m\"#email\"\u001b[39m\u001b[33m,\u001b[39m email)\n \u001b[90m 12 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m\"#password\"\u001b[39m\u001b[33m,\u001b[39m password)\n \u001b[90m 13 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"button[type='submit']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                                "column": 14,
+                                "line": 10
+                              },
+                              "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/login\", waiting until \"load\"\u001b[22m\n\n\n   8 |\n   9 | async function loginAs(page: any, email: string, password: string) {\n> 10 |   await page.goto(`${BASE_URL}/login`)\n     |              ^\n  11 |   await page.fill(\"#email\", email)\n  12 |   await page.fill(\"#password\", password)\n  13 |   await page.locator(\"button[type='submit']\").click()\n    at loginAs (D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:10:14)\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:370:13"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-06-08T17:08:24.358Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-fc55a-der-detail-page-should-load-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-fc55a-der-detail-page-should-load-chromium\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-fc55a-der-detail-page-should-load-chromium\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                            "column": 14,
+                            "line": 10
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "b1c7859d981cc20c96be-cdb157e7fb5d1f342138",
+                  "file": "e2e.spec.ts",
+                  "line": 386,
+                  "column": 9
+                }
+              ]
+            },
+            {
+              "title": "Auth Protection",
+              "file": "e2e.spec.ts",
+              "line": 402,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "should redirect to login when accessing checkout without auth",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 26,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 2809,
+                          "error": {
+                            "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/checkout\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/checkout\", waiting until \"load\"\u001b[22m\n",
+                            "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/checkout\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/checkout\", waiting until \"load\"\u001b[22m\n\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:404:18",
+                            "location": {
+                              "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                              "column": 18,
+                              "line": 404
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 402 |\u001b[39m   test\u001b[33m.\u001b[39mdescribe(\u001b[32m\"Auth Protection\"\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 403 |\u001b[39m     test(\u001b[32m\"should redirect to login when accessing checkout without auth\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 404 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`${BASE_URL}/checkout`\u001b[39m)\n \u001b[90m     |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 405 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[35m/\\/login/\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\n \u001b[90m 406 |\u001b[39m     })\n \u001b[90m 407 |\u001b[39m\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                                "column": 18,
+                                "line": 404
+                              },
+                              "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/checkout\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/checkout\", waiting until \"load\"\u001b[22m\n\n\n  402 |   test.describe(\"Auth Protection\", () => {\n  403 |     test(\"should redirect to login when accessing checkout without auth\", async ({ page }) => {\n> 404 |       await page.goto(`${BASE_URL}/checkout`)\n      |                  ^\n  405 |       await page.waitForURL(/\\/login/, { timeout: 10000 })\n  406 |     })\n  407 |\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:404:18"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-06-08T17:08:29.206Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-0ee83-ssing-checkout-without-auth-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-0ee83-ssing-checkout-without-auth-chromium\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-0ee83-ssing-checkout-without-auth-chromium\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                            "column": 18,
+                            "line": 404
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "b1c7859d981cc20c96be-bc64d41c2616d5bb8a78",
+                  "file": "e2e.spec.ts",
+                  "line": 403,
+                  "column": 9
+                },
+                {
+                  "title": "should redirect to login when accessing account without auth",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 27,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 2701,
+                          "error": {
+                            "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/account\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/account\", waiting until \"load\"\u001b[22m\n",
+                            "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/account\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/account\", waiting until \"load\"\u001b[22m\n\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:409:18",
+                            "location": {
+                              "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                              "column": 18,
+                              "line": 409
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 407 |\u001b[39m\n \u001b[90m 408 |\u001b[39m     test(\u001b[32m\"should redirect to login when accessing account without auth\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 409 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`${BASE_URL}/account`\u001b[39m)\n \u001b[90m     |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 410 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[35m/\\/login/\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\n \u001b[90m 411 |\u001b[39m     })\n \u001b[90m 412 |\u001b[39m\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                                "column": 18,
+                                "line": 409
+                              },
+                              "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/account\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/account\", waiting until \"load\"\u001b[22m\n\n\n  407 |\n  408 |     test(\"should redirect to login when accessing account without auth\", async ({ page }) => {\n> 409 |       await page.goto(`${BASE_URL}/account`)\n      |                  ^\n  410 |       await page.waitForURL(/\\/login/, { timeout: 10000 })\n  411 |     })\n  412 |\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:409:18"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-06-08T17:08:33.769Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-98c4e-essing-account-without-auth-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-98c4e-essing-account-without-auth-chromium\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-98c4e-essing-account-without-auth-chromium\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                            "column": 18,
+                            "line": 409
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "b1c7859d981cc20c96be-c6a1bb1779469a934362",
+                  "file": "e2e.spec.ts",
+                  "line": 408,
+                  "column": 9
+                },
+                {
+                  "title": "should redirect to login when accessing admin without auth",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 28,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 2734,
+                          "error": {
+                            "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/admin\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/admin\", waiting until \"load\"\u001b[22m\n",
+                            "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/admin\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/admin\", waiting until \"load\"\u001b[22m\n\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:414:18",
+                            "location": {
+                              "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                              "column": 18,
+                              "line": 414
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 412 |\u001b[39m\n \u001b[90m 413 |\u001b[39m     test(\u001b[32m\"should redirect to login when accessing admin without auth\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 414 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`${BASE_URL}/admin`\u001b[39m)\n \u001b[90m     |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 415 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[35m/\\/login/\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\n \u001b[90m 416 |\u001b[39m     })\n \u001b[90m 417 |\u001b[39m   })\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                                "column": 18,
+                                "line": 414
+                              },
+                              "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/admin\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/admin\", waiting until \"load\"\u001b[22m\n\n\n  412 |\n  413 |     test(\"should redirect to login when accessing admin without auth\", async ({ page }) => {\n> 414 |       await page.goto(`${BASE_URL}/admin`)\n      |                  ^\n  415 |       await page.waitForURL(/\\/login/, { timeout: 10000 })\n  416 |     })\n  417 |   })\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:414:18"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-06-08T17:08:37.940Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-f157f-ccessing-admin-without-auth-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-f157f-ccessing-admin-without-auth-chromium\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-f157f-ccessing-admin-without-auth-chromium\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                            "column": 18,
+                            "line": 414
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "b1c7859d981cc20c96be-169b34a75b4e3bcf6ae3",
+                  "file": "e2e.spec.ts",
+                  "line": 413,
+                  "column": 9
+                }
+              ]
+            },
+            {
+              "title": "API Endpoints",
+              "file": "e2e.spec.ts",
+              "line": 420,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "GET /api/products should return products",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 29,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 2660,
+                          "error": {
+                            "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/api/products?page=1&limit=4\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/api/products?page=1&limit=4\", waiting until \"load\"\u001b[22m\n",
+                            "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/api/products?page=1&limit=4\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/api/products?page=1&limit=4\", waiting until \"load\"\u001b[22m\n\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:422:35",
+                            "location": {
+                              "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                              "column": 35,
+                              "line": 422
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 420 |\u001b[39m   test\u001b[33m.\u001b[39mdescribe(\u001b[32m\"API Endpoints\"\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 421 |\u001b[39m     test(\u001b[32m\"GET /api/products should return products\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 422 |\u001b[39m       \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`${BASE_URL}/api/products?page=1&limit=4`\u001b[39m)\n \u001b[90m     |\u001b[39m                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 423 |\u001b[39m       expect(response\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBe(\u001b[35m200\u001b[39m)\n \u001b[90m 424 |\u001b[39m\n \u001b[90m 425 |\u001b[39m       \u001b[36mconst\u001b[39m data \u001b[33m=\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(\u001b[36mawait\u001b[39m response\u001b[33m!\u001b[39m\u001b[33m.\u001b[39mtext())\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                                "column": 35,
+                                "line": 422
+                              },
+                              "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/api/products?page=1&limit=4\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/api/products?page=1&limit=4\", waiting until \"load\"\u001b[22m\n\n\n  420 |   test.describe(\"API Endpoints\", () => {\n  421 |     test(\"GET /api/products should return products\", async ({ page }) => {\n> 422 |       const response = await page.goto(`${BASE_URL}/api/products?page=1&limit=4`)\n      |                                   ^\n  423 |       expect(response?.status()).toBe(200)\n  424 |\n  425 |       const data = JSON.parse(await response!.text())\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:422:35"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-06-08T17:08:41.961Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-4a449-ucts-should-return-products-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-4a449-ucts-should-return-products-chromium\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-4a449-ucts-should-return-products-chromium\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                            "column": 35,
+                            "line": 422
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "b1c7859d981cc20c96be-c52d5562e6baf1fc3f49",
+                  "file": "e2e.spec.ts",
+                  "line": 421,
+                  "column": 9
+                },
+                {
+                  "title": "GET /api/auth/session should return session info",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 30,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 2621,
+                          "error": {
+                            "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/api/auth/session\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/api/auth/session\", waiting until \"load\"\u001b[22m\n",
+                            "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/api/auth/session\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/api/auth/session\", waiting until \"load\"\u001b[22m\n\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:431:35",
+                            "location": {
+                              "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                              "column": 35,
+                              "line": 431
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 429 |\u001b[39m\n \u001b[90m 430 |\u001b[39m     test(\u001b[32m\"GET /api/auth/session should return session info\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 431 |\u001b[39m       \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`${BASE_URL}/api/auth/session`\u001b[39m)\n \u001b[90m     |\u001b[39m                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 432 |\u001b[39m       expect(response\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBe(\u001b[35m200\u001b[39m)\n \u001b[90m 433 |\u001b[39m     })\n \u001b[90m 434 |\u001b[39m   })\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                                "column": 35,
+                                "line": 431
+                              },
+                              "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/api/auth/session\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/api/auth/session\", waiting until \"load\"\u001b[22m\n\n\n  429 |\n  430 |     test(\"GET /api/auth/session should return session info\", async ({ page }) => {\n> 431 |       const response = await page.goto(`${BASE_URL}/api/auth/session`)\n      |                                   ^\n  432 |       expect(response?.status()).toBe(200)\n  433 |     })\n  434 |   })\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:431:35"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-06-08T17:08:45.676Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-568a7--should-return-session-info-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-568a7--should-return-session-info-chromium\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-568a7--should-return-session-info-chromium\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                            "column": 35,
+                            "line": 431
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "b1c7859d981cc20c96be-51fe353031bf9d794331",
+                  "file": "e2e.spec.ts",
+                  "line": 430,
+                  "column": 9
+                }
+              ]
+            },
+            {
+              "title": "AI Chat",
+              "file": "e2e.spec.ts",
+              "line": 437,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "should have chat bubble visible on all pages",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 31,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 2675,
+                          "error": {
+                            "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n",
+                            "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:439:18",
+                            "location": {
+                              "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                              "column": 18,
+                              "line": 439
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 437 |\u001b[39m   test\u001b[33m.\u001b[39mdescribe(\u001b[32m\"AI Chat\"\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 438 |\u001b[39m     test(\u001b[32m\"should have chat bubble visible on all pages\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 439 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[33mBASE_URL\u001b[39m)\n \u001b[90m     |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 440 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m2000\u001b[39m)\n \u001b[90m 441 |\u001b[39m\n \u001b[90m 442 |\u001b[39m       \u001b[36mconst\u001b[39m chatBtn \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"button[aria-label='Open chat']\"\u001b[39m)\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                                "column": 18,
+                                "line": 439
+                              },
+                              "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n\n\n  437 |   test.describe(\"AI Chat\", () => {\n  438 |     test(\"should have chat bubble visible on all pages\", async ({ page }) => {\n> 439 |       await page.goto(BASE_URL)\n      |                  ^\n  440 |       await page.waitForTimeout(2000)\n  441 |\n  442 |       const chatBtn = page.locator(\"button[aria-label='Open chat']\")\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:439:18"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-06-08T17:08:49.413Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-fdd36-bubble-visible-on-all-pages-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-fdd36-bubble-visible-on-all-pages-chromium\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-fdd36-bubble-visible-on-all-pages-chromium\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                            "column": 18,
+                            "line": 439
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "b1c7859d981cc20c96be-e2cc824e07be937ba3a3",
+                  "file": "e2e.spec.ts",
+                  "line": 438,
+                  "column": 9
+                }
+              ]
+            },
+            {
+              "title": "Sign Out",
+              "file": "e2e.spec.ts",
+              "line": 448,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "should sign out successfully",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 32,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 2657,
+                          "error": {
+                            "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/login\", waiting until \"load\"\u001b[22m\n",
+                            "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/login\", waiting until \"load\"\u001b[22m\n\n    at loginAs (D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:10:14)\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:450:13",
+                            "location": {
+                              "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                              "column": 14,
+                              "line": 10
+                            },
+                            "snippet": "\u001b[0m \u001b[90m  8 |\u001b[39m\n \u001b[90m  9 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m loginAs(page\u001b[33m:\u001b[39m any\u001b[33m,\u001b[39m email\u001b[33m:\u001b[39m string\u001b[33m,\u001b[39m password\u001b[33m:\u001b[39m string) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`${BASE_URL}/login`\u001b[39m)\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m\"#email\"\u001b[39m\u001b[33m,\u001b[39m email)\n \u001b[90m 12 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m\"#password\"\u001b[39m\u001b[33m,\u001b[39m password)\n \u001b[90m 13 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"button[type='submit']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                                "column": 14,
+                                "line": 10
+                              },
+                              "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/login\", waiting until \"load\"\u001b[22m\n\n\n   8 |\n   9 | async function loginAs(page: any, email: string, password: string) {\n> 10 |   await page.goto(`${BASE_URL}/login`)\n     |              ^\n  11 |   await page.fill(\"#email\", email)\n  12 |   await page.fill(\"#password\", password)\n  13 |   await page.locator(\"button[type='submit']\").click()\n    at loginAs (D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:10:14)\n    at D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts:450:13"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-06-08T17:08:53.186Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-d457d-hould-sign-out-successfully-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-d457d-hould-sign-out-successfully-chromium\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\test-results\\e2e-Sole-Heaven---Full-E2E-d457d-hould-sign-out-successfully-chromium\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\tests\\e2e.spec.ts",
+                            "column": 14,
+                            "line": 10
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "b1c7859d981cc20c96be-6f81fa1cddc63933ceec",
+                  "file": "e2e.spec.ts",
+                  "line": 449,
+                  "column": 9
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-06-08T17:06:37.087Z",
+    "duration": 139060.341,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 33,
+    "flaky": 0
+  }
+}

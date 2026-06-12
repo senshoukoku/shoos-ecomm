@@ -1,0 +1,18 @@
+- generic [active] [ref=e1]:
+  - img
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "SOLE HEAVEN" [ref=e4] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e5]:
+        - link "Products" [ref=e6] [cursor=pointer]:
+          - /url: /products
+        - link "Login" [ref=e7] [cursor=pointer]:
+          - /url: /login
+        - link "Register" [ref=e8] [cursor=pointer]:
+          - /url: /register
+        - button [ref=e9] [cursor=pointer]:
+          - img [ref=e10]
+  - main [ref=e12]
+  - button "Open chat" [ref=e22] [cursor=pointer]:
+    - img [ref=e23]

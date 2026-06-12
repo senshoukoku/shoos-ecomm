@@ -1,0 +1,26 @@
+- generic [active] [ref=e1]:
+  - img
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "SOLE HEAVEN" [ref=e4] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e5]:
+        - link "Products" [ref=e6] [cursor=pointer]:
+          - /url: /products
+        - link "Login" [ref=e7] [cursor=pointer]:
+          - /url: /login
+        - link "Register" [ref=e8] [cursor=pointer]:
+          - /url: /register
+        - button [ref=e9] [cursor=pointer]:
+          - img [ref=e10]
+  - main [ref=e12]:
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - paragraph [ref=e15]: CATALOG
+        - heading "All Products" [level=1] [ref=e16]
+      - button "SHOW FILTERS" [ref=e17] [cursor=pointer]:
+        - img [ref=e18]
+        - text: SHOW FILTERS
+  - button "Open chat" [ref=e60] [cursor=pointer]:
+    - img [ref=e61]
+  - alert [ref=e64]

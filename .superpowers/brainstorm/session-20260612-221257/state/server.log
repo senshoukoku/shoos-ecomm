@@ -1,0 +1,12 @@
+{"type":"server-started","port":64919,"host":"127.0.0.1","url_host":"localhost","url":"http://localhost:64919","screen_dir":"D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\.superpowers\\brainstorm\\session-20260612-221257\\content","state_dir":"D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\.superpowers\\brainstorm\\session-20260612-221257\\state"}
+{"type":"screen-added","file":"D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\.superpowers\\brainstorm\\session-20260612-221257\\content\\theme-direction.html"}
+{"source":"user-event","type":"click","text":"A\n    \n      Warm & Luxe\n      Cream/ivory backgrounds, warm amber/gold accents, rich browns — premium sneaker box feel","choice":"warm","id":null,"timestamp":1781274703444}
+{"type":"screen-added","file":"D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\.superpowers\\brainstorm\\session-20260612-221257\\content\\entry-animation.html"}
+{"type":"screen-added","file":"D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\.superpowers\\brainstorm\\session-20260612-221257\\content\\animation-scope.html"}
+{"source":"user-event","type":"click","text":"B\n    \n      All Pages\n      Consistent experience throughout — every page feels polished","choice":"all-pages","id":null,"timestamp":1781274787470}
+{"source":"user-event","type":"click","text":"B\n    \n      All Pages\n      Consistent experience throughout — every page feels polished","choice":"all-pages","id":null,"timestamp":1781274789702}
+{"source":"user-event","type":"click","text":"B\n    \n      All Pages\n      Consistent experience throughout — every page feels polished","choice":"all-pages","id":null,"timestamp":1781274789822}
+{"type":"screen-added","file":"D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\.superpowers\\brainstorm\\session-20260612-221257\\content\\entry-animation-v2.html"}
+{"source":"user-event","type":"click","text":"C\n    \n      Slide In (Alternating)\n      Elements slide in from alternating sides — more playful, energetic","choice":"slide","id":null,"timestamp":1781274807517}
+{"type":"screen-added","file":"D:\\Kurt\\PROGRAM PROJECTS\\ECOMM\\.superpowers\\brainstorm\\session-20260612-221257\\content\\design-preview.html"}
+{"type":"server-stopped","reason":"idle timeout"}

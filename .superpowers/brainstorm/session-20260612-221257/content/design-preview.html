@@ -1,0 +1,39 @@
+<h2>Design Overview — Light Mode + Entry Animations</h2>
+
+<div class="section">
+  <h3>1. Light Mode Colors (Warm &amp; Luxe)</h3>
+  <div style="display:flex;gap:1rem;flex-wrap:wrap;margin:1rem 0;">
+    <div style="flex:1;min-width:120px;padding:1rem;background:#faf6f0;border-radius:8px;text-align:center;border:1px solid #e8e0d4;">
+      <div style="font-weight:700;">Surface</div>
+      <div style="font-size:.85rem;color:#666;">#faf6f0</div>
+    </div>
+    <div style="flex:1;min-width:120px;padding:1rem;background:#f5efe6;border-radius:8px;text-align:center;border:1px solid #e8e0d4;">
+      <div style="font-weight:700;">Surface-50</div>
+      <div style="font-size:.85rem;color:#666;">#f5efe6</div>
+    </div>
+    <div style="flex:1;min-width:120px;padding:1rem;background:#ede4d6;border-radius:8px;text-align:center;border:1px solid #e8e0d4;">
+      <div style="font-weight:700;">Surface-100</div>
+      <div style="font-size:.85rem;color:#666;">#ede4d6</div>
+    </div>
+    <div style="flex:1;min-width:120px;padding:1rem;background:#1a1a1a;border-radius:8px;text-align:center;color:#f5f5f5;">
+      <div style="font-weight:700;">Ink</div>
+      <div style="font-size:.85rem;color:#aaa;">#1a1a1a</div>
+    </div>
+    <div style="flex:1;min-width:120px;padding:1rem;background:#f59e0b;border-radius:8px;text-align:center;">
+      <div style="font-weight:700;">Accent</div>
+      <div style="font-size:.85rem;">#f59e0b (kept)</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>2. Theme Toggle</h3>
+  <p>Sun/moon icon button in the Navbar. Toggles <code>dark</code> class on &lt;html&gt;. Persisted in localStorage. Transition everything smoothly with <code>transition-colors</code>.</p>
+</div>
+
+<div class="section">
+  <h3>3. Entry Animation (Slide In)</h3>
+  <p>On page load, key section elements slide in from alternating sides with staggered delays.<br>
+  Uses existing <code>slide-right</code> keyframe + a new <code>slide-left</code> for alternating direction.<br>
+  A <code>usePageLoadAnimation</code> hook manages the stagger timing.</p>
+</div>
