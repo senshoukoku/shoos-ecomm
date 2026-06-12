@@ -27,6 +27,10 @@ const body = Sora({
 export const metadata: Metadata = {
   title: "SHOOOS – Premium Sneakers",
   description: "Your destination for premium sneakers.",
+  icons: {
+    icon: [{ url: "/images/siteicn/shooos.png", type: "image/png" }],
+    apple: [{ url: "/images/siteicn/shooos.png", type: "image/png" }],
+  },
 }
 
 export default function RootLayout({
