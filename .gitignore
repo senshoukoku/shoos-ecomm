@@ -25,11 +25,27 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# local env files
+# environment files
+.env
 .env*.local
 
 # vercel
 .vercel
+
+# playwright
+/test-results/
+.playwright-mcp/
+
+# working directories
+/ui-critical-fix/
+
+# temp files
+/server_out*.txt
+/std*.txt
+
+# markdown files (except root README)
+*.md
+!README.md
 
 # typescript
 *.tsbuildinfo

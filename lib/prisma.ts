@@ -5,12 +5,13 @@ const globalForPrisma = globalThis as unknown as {
   prisma: PrismaClient | undefined
 }
 
+const isRemote = process.env.DATABASE_URL?.includes("supabase")
 export const prisma =
   globalForPrisma.prisma ??
   new PrismaClient({
     adapter: new PrismaPg({
       connectionString: process.env.DATABASE_URL!,
-      ssl: { rejectUnauthorized: false },
+      ...(isRemote ? { ssl: { rejectUnauthorized: false } } : {}),
     }),
   })
 
