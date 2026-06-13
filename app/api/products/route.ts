@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from "next/server"
 import { prisma } from "@/lib/prisma"
 import { Prisma } from "@/app/generated/prisma/client"
 
+export const dynamic = "force-dynamic"
+
 function safeInt(value: string | null | undefined, def: number): number {
   if (!value) return def
   const n = parseInt(value, 10)
