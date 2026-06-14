@@ -12,6 +12,7 @@ function safeInt(value: string | null | undefined, def: number): number {
 
 export async function GET(request: NextRequest) {
   try {
+    console.log("DATABASE_URL host:", process.env.DATABASE_URL ? new URL(process.env.DATABASE_URL).host : "NOT SET")
     const { searchParams } = new URL(request.url)
 
     const page = safeInt(searchParams.get("page"), 1)
