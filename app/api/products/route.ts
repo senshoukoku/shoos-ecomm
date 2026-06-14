@@ -11,8 +11,9 @@ function safeInt(value: string | null | undefined, def: number): number {
 }
 
 export async function GET(request: NextRequest) {
+  const dbHost = process.env.DATABASE_URL ? new URL(process.env.DATABASE_URL).host : "NOT SET"
   try {
-    console.log("DATABASE_URL host:", process.env.DATABASE_URL ? new URL(process.env.DATABASE_URL).host : "NOT SET")
+    console.log("DATABASE_URL host:", dbHost)
     const { searchParams } = new URL(request.url)
 
     const page = safeInt(searchParams.get("page"), 1)
@@ -81,6 +82,9 @@ export async function GET(request: NextRequest) {
     })
   } catch (error) {
     console.error("Products API error:", error)
-    return NextResponse.json({ error: "Failed to fetch products" }, { status: 500 })
+    return NextResponse.json({
+      error: "Failed to fetch products",
+      dbHost,
+    }, { status: 500 })
   }
 }
